@@ -22,7 +22,6 @@ menu(type='*' where=window.is_taskbar||sel.count mode=mode.multiple title=title.
 	}
 	item(title=title.control_panel image=\uE0F3 cmd='shell:::{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}')
 	item(title='All Control Panel Items' image=\uE0F3 cmd='shell:::{ED7BA470-8E54-465E-825C-99712043E01C}')
-	item(title=title.run image=\uE14B cmd='shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}')
 	menu(where=sys.ver.major >= 10 title=title.settings sep=sep.before image=\uE0F3)
 	{
 		// https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-settings-app

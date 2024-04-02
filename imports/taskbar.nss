@@ -3,9 +3,9 @@
 	item(title="config" image=\uE10A cmd='"@app.cfg"')
 	item(title="manager" image=\uE0F3 admin cmd='"@app.exe"')
 	item(title="directory" image=\uE0E8 cmd='"@app.dir"')
-	item(title="version\t"+@app.ver vis=label col=1)
 	item(title="docs" image=\uE1C4 cmd='https://nilesoft.org/docs')
-	item(title="donate" image=\uE1A7 cmd='https://nilesoft.org/donate')
+	// item(title="donate" image=\uE1A7 cmd='https://nilesoft.org/donate')
+	// item(title="version "+@app.ver vis=label col=1)
 }
 menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 {
