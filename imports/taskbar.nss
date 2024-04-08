@@ -15,6 +15,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 		item(title='Edge' image cmd='@sys.prog32\Microsoft\Edge\Application\msedge.exe')
 		item(title='Calculator' image=\ue1e7 cmd='calc.exe')
 		item(title=str.res('regedit.exe,-16') image cmd='regedit.exe')
+		item(title='uTools' image cmd='C:\Users\Administrator\AppData\Local\Programs\utools\uTools.exe')
 	}
 	menu(title=title.windows image=\uE1FB)
 	{
