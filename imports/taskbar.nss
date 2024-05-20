@@ -18,6 +18,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 		item(title=str.res('regedit.exe,-16') image cmd='regedit.exe')
 		// item(title='uTools' image cmd='C:\Users\Administrator\AppData\Local\Programs\utools\uTools.exe')
 		item(title='Rubick' image cmd='D:\rubick\rubick.exe')
+		item(title='Cmder' image cmd='D:\GitHub\ok-cmder\Cmder.exe')
 	}
 	// windows窗口管理
 	menu(title='Windows 窗口管理' vis=key.shift() image=\uE1FB)
