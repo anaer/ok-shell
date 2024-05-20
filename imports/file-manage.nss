@@ -1,4 +1,4 @@
-﻿menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" title='File Manage' image=\uE253)
+﻿menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" title='文件管理' image=\uE253)
 {
 	menu(separator="after" title=title.copy_path image=icon.copy_path)
 	{
@@ -18,55 +18,55 @@
 	
 	menu(separator="after" image=\uE290 title=title.select)
 	{
-		item(title="All" image=icon.select_all cmd=command.select_all)
-		item(title="Invert" image=icon.invert_selection cmd=command.invert_selection)
-		item(title="None" image=icon.select_none cmd=command.select_none)
+		item(title="全选" image=icon.select_all cmd=command.select_all)
+		item(title="反选" image=icon.invert_selection cmd=command.invert_selection)
+		item(title="不选" image=icon.select_none cmd=command.select_none)
 	}
 	
-	item(type='file|dir|back.dir|drive' title='Take Ownership' image=[\uE194,#f00] admin
+	item(type='file|dir|back.dir|drive' title='获取权限' image=[\uE194,#f00] admin
 		cmd args='/K takeown /f "@sel.path" @if(sel.type==1,null,"/r /d y") && icacls "@sel.path" /grant *S-1-5-32-544:F @if(sel.type==1,"/c /l","/t /c /l /q")')
 	separator
-	menu(title="Show/Hide" image=icon.show_hidden_files)
+	menu(title="显示/隐藏" image=icon.show_hidden_files)
 	{
-		item(title="System files" image=inherit cmd='@command.togglehidden')
-		item(title="File name extensions" image=icon.show_file_extensions cmd='@command.toggleext')
+		item(title="显示系统隐藏文件" image=inherit cmd='@command.togglehidden')
+		item(title="显示文件扩展名" image=icon.show_file_extensions cmd='@command.toggleext')
 	}
 
-	menu(type='file|dir|back.dir' mode="single" title='Attributes')
+	menu(type='file|dir|back.dir' mode="single" title='修改属性')
 	{
 		$atrr = io.attributes(sel.path)
-		item(title='Hidden' checked=io.attribute.hidden(atrr)
+		item(title='隐藏' checked=io.attribute.hidden(atrr)
 			cmd args='/c ATTRIB @if(io.attribute.hidden(atrr),"-","+")H "@sel.path"' window=hidden)
 		
-		item(title='System' checked=io.attribute.system(atrr)
+		item(title='系统' checked=io.attribute.system(atrr)
 			cmd args='/c ATTRIB @if(io.attribute.system(atrr),"-","+")S "@sel.path"' window=hidden)
 			
-		item(title='Read-Only' checked=io.attribute.readonly(atrr)
+		item(title='只读' checked=io.attribute.readonly(atrr)
 			cmd args='/c ATTRIB @if(io.attribute.readonly(atrr),"-","+")R "@sel.path"' window=hidden)
 			
-		item(title='Archive' checked=io.attribute.archive(atrr)
+		item(title='存档' checked=io.attribute.archive(atrr)
 			cmd args='/c ATTRIB @if(io.attribute.archive(atrr),"-","+")A "@sel.path"' window=hidden)
 		separator
-		item(title="CREATED" keys=io.dt.created(sel.path, 'y/m/d') cmd=io.dt.created(sel.path,2000,1,1))
-		item(title="MODIFIED" keys=io.dt.modified(sel.path, 'y/m/d') cmd=io.dt.modified(sel.path,2000,1,1))
-		item(title="ACCESSED" keys=io.dt.accessed(sel.path, 'y/m/d') cmd=io.dt.accessed(sel.path,2000,1,1))
+		item(title="创建时间" keys=io.dt.created(sel.path, 'y/m/d') cmd=io.dt.created(sel.path,2000,1,1))
+		item(title="修改时间" keys=io.dt.modified(sel.path, 'y/m/d') cmd=io.dt.modified(sel.path,2000,1,1))
+		item(title="访问时间" keys=io.dt.accessed(sel.path, 'y/m/d') cmd=io.dt.accessed(sel.path,2000,1,1))
 	}
 
-	menu(mode="single" type='file' find='.dll|.ocx' separator="before" title='Register Server' image=\uea86)
+	menu(mode="single" type='file' find='.dll|.ocx' separator="before" title='注册动态库' image=\uea86)
 	{
-		item(title='Register' admin cmd='regsvr32.exe' args='@sel.path.quote' invoke="multiple")
-		item(title='Unregister' admin cmd='regsvr32.exe' args='/u @sel.path.quote' invoke="multiple")
+		item(title='注册' admin cmd='regsvr32.exe' args='@sel.path.quote' invoke="multiple")
+		item(title='取消' admin cmd='regsvr32.exe' args='/u @sel.path.quote' invoke="multiple")
 	}
 
 	menu(mode="single" type='back' expanded=true)
 	{
-		menu(separator="before" title='New Folder' image=icon.new_folder)
+		menu(separator="before" title='新建文件夹' image=icon.new_folder)
 		{
 			item(title='DateTime' cmd=io.dir.create(sys.datetime("ymdHMSs")))
 			item(title='Guid' cmd=io.dir.create(str.guid))
 		}
 		
-		menu(title='New File' image=icon.new_file)
+		menu(title='新建文件' image=icon.new_file)
 		{
 			$dt = sys.datetime("ymdHMSs")
 			item(title='TXT' cmd=io.file.create('@(dt).txt', 'Hello World!'))

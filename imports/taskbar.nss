@@ -32,7 +32,8 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 	}
 	// 显示桌面
 	// item(title=title.desktop image=icon.desktop cmd=command.toggle_desktop)
-	item(title=title.settings image=icon.settings(auto, image.color1) cmd='ms-settings:')
+	// 与goto控制面板中重复
+	// item(title='Windows设置' image=icon.settings(auto, image.color1) cmd='ms-settings:')
 
 	// 任务管理器
 	// item(title=title.task_manager sep=both image=icon.task_manager cmd='taskmgr.exe')
