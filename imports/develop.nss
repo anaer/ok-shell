@@ -1,4 +1,4 @@
-﻿menu(mode="multiple" title='&Develop' vis=key.shift() sep=sep.bottom image=\uE26E)
+﻿menu(mode="multiple" title='开发者工具' sep=sep.bottom image=\uE26E)
 {
 	menu(mode="single" title='editors' image=\uE17A)
 	{
