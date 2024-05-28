@@ -1,24 +1,28 @@
-﻿menu(type="taskbar" vis=key.shift() or key.lbutton() pos=0 title='Shell管理' image=\uE249)
+﻿menu(type="taskbar" pos=0 title='Shell管理' image=\uE249)
 {
 	item(title="配置文件" image=\uE10A cmd='"@app.cfg"')
 	item(title="Shell管理面板" image=\uE0F3 admin cmd='"@app.exe"')
 	item(title="程序目录" image=\uE0E8 cmd='"@app.dir"')
 	item(title="在线文档" image=\uE1C4 cmd='https://nilesoft.org/docs')
+	item(title='重启资源管理器' cmd=command.restart_explorer)
 	// item(title="donate" image=\uE1A7 cmd='https://nilesoft.org/donate')
 	// item(title="version "+@app.ver vis=label col=1)
-	item(title='重启资源管理器' cmd=command.restart_explorer)
 }
 menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 {
 	menu(title="常用应用" image=\uE254)
 	{
-		item(title='画图' image=\uE116 cmd='mspaint')
+		menu(title='系统' image=\uE255) 
+		{
+			item(title='画图' image=\uE116 cmd='mspaint')
+			item(title=str.res('regedit.exe,-16') image cmd='regedit.exe') // 注册表编辑器
+		} 
+		item(title='HeidiSQL' image cmd='D:\HeidiSQL\heidisql.exe')
+		item(title='Geek Uninstaller' image cmd='D:\SingleWare\geek.exe')
 		// item(title='Edge' image cmd='@sys.prog32\Microsoft\Edge\Application\msedge.exe')
 		// item(title='计算器' image=\ue1e7 cmd='calc.exe')
-		item(title=str.res('regedit.exe,-16') image cmd='regedit.exe')
-		// item(title='uTools' image cmd='C:\Users\Administrator\AppData\Local\Programs\utools\uTools.exe')
-		item(title='Rubick' image cmd='D:\rubick\rubick.exe')
-		item(title='Cmder' image cmd='D:\GitHub\ok-cmder\Cmder.exe')
+		// item(title='uTools' image cmd='C:\Users\Administrator\AppData\Local\Programs\utools\uTools.exe') // 已卸载
+		// item(title='Rubick' image cmd='D:\rubick\rubick.exe') // 已卸载
 	}
 	// windows窗口管理
 	menu(title='Windows 窗口管理' vis=key.shift() image=\uE1FB)
