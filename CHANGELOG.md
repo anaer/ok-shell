@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 240529
+
+1. 添加var.nss 
+
 ## 240507
 
 1. taskbar.nss 注释重复显示的菜单

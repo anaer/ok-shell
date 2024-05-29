@@ -8,6 +8,7 @@
 	tip.enabled=true
 }
 
+import 'imports/var.nss'
 import 'imports/theme.nss'
 import 'imports/images.nss'
 
