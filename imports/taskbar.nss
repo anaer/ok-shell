@@ -17,9 +17,19 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 			item(title='画图' image=\uE116 cmd='mspaint')
 			item(title=str.res('regedit.exe,-16') image cmd='regedit.exe') // 注册表编辑器
 		} 
-		item(title='HeidiSQL' image cmd=HeidiSQL_Path)
+		menu(title='数据库' image=\uE256) 
+		{
+			item(title='HeidiSQL' image cmd=HeidiSQL_Path)
+			item(title='DB.Browser.for.SQLite' image cmd=DB_Browser_Path)
+			item(title='SQLiteSpy' image cmd=SQLiteSpy_Path)
+		}
 		item(title='Geek Uninstaller' image cmd=Geek_Path)
 		item(title='WingetUI' image cmd=WingetUI_Path)
+		item(title='PowerToys' image cmd=PowerToys_Path)
+		item(title='TotalCmd' image cmd=TotalCmd_Path)
+		item(title='WinSCP' image cmd=WinSCP_Path)
+		item(title='企业微信' image cmd=WXWork_Path)
+
 		// item(title='Edge' image cmd='@sys.prog32\Microsoft\Edge\Application\msedge.exe')
 		// item(title='计算器' image=\ue1e7 cmd='calc.exe')
 		// item(title='uTools' image cmd=uTools_Path) // 已卸载
