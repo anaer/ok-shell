@@ -19,6 +19,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 		} 
 		menu(title='数据库' image=\uE256) 
 		{
+			item(title='Navicat' image cmd=Navicat_Path)
 			item(title='HeidiSQL' image cmd=HeidiSQL_Path)
 			item(title='DB.Browser.for.SQLite' image cmd=DB_Browser_Path)
 			item(title='SQLiteSpy' image cmd=SQLiteSpy_Path)
