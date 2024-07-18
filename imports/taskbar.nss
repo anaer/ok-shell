@@ -24,6 +24,8 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 			item(title='DB.Browser.for.SQLite' image cmd=DB_Browser_Path)
 			item(title='SQLiteSpy' image cmd=SQLiteSpy_Path)
 		}
+		item(title='AnyTXT' image cmd=AnyTXT_Path)
+		item(title='FileConverter' image cmd=FileConverter_Path)
 		item(title='Geek Uninstaller' image cmd=Geek_Path)
 		item(title='WingetUI' image cmd=WingetUI_Path)
 		item(title='PowerToys' image cmd=PowerToys_Path)

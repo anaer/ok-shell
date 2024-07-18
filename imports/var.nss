@@ -13,3 +13,6 @@ $TotalCmd_Path='D:\totalcmd\TOTALCMD64.EXE'
 $WinSCP_Path='D:\WinSCP\WinSCP.exe'
 $WXWork_Path='C:\Program Files (x86)\WXWork\WXWork.exe'
 $Navicat_Path='D:\Navicat Premium Lite 17\navicat.exe'
+
+$AnyTXT_Path='D:\AnyTXT Searcher\ATGUI.exe'
+$FileConverter_Path='D:\File Converter\FileConverter.exe'
