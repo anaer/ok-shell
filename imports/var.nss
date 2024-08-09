@@ -16,3 +16,7 @@ $Navicat_Path='D:\Navicat Premium Lite 17\navicat.exe'
 
 $AnyTXT_Path='D:\AnyTXT Searcher\ATGUI.exe'
 $FileConverter_Path='D:\File Converter\FileConverter.exe'
+
+$Notepad2_Path='D:\totalcmd\Tools\Notepad2.exe'
+$Notepad3_Path='D:\Notepad3\Notepad3.exe'
+$Notepad4_Path='D:\Notepad4\Notepad4.exe'
