@@ -33,7 +33,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 		item(title='WinSCP' image cmd=WinSCP_Path)
 		item(title='企业微信' image cmd=WXWork_Path)
 		// item(title='Notepad2' image cmd=Notepad2_Path)
-		// item(title='Notepad3' image cmd=Notepad3_Path)
+		// item(title='Notepad3' image cmd=Notepad3_Path) // 已卸载
 		item(title='Notepad4' image cmd=Notepad4_Path)
 
 		// item(title='Edge' image cmd='@sys.prog32\Microsoft\Edge\Application\msedge.exe')
