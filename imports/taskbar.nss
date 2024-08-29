@@ -12,19 +12,19 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 {
 	menu(title="常用应用" image=\uE254)
 	{
-		menu(title='系统' image=\uE255) 
+		menu(title='系统' image=\uE255)
 		{
 			item(title='画图' image=\uE116 cmd='mspaint')
 			item(title=str.res('regedit.exe,-16') image cmd='regedit.exe') // 注册表编辑器
-		} 
-		menu(title='数据库' image=\uE256) 
+		}
+		menu(title='数据库' image=\uE256)
 		{
 			item(title='Navicat' image cmd=Navicat_Path)
 			item(title='HeidiSQL' image cmd=HeidiSQL_Path)
 			item(title='DB.Browser.for.SQLite' image cmd=DB_Browser_Path)
 			item(title='SQLiteSpy' image cmd=SQLiteSpy_Path)
 		}
-		item(title='AnyTXT' image cmd=AnyTXT_Path)
+		// item(title='AnyTXT' image cmd=AnyTXT_Path)
 		item(title='FileConverter' image cmd=FileConverter_Path)
 		item(title='Geek Uninstaller' image cmd=Geek_Path)
 		item(title='WingetUI' image cmd=WingetUI_Path)
